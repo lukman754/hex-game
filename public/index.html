@@ -144,21 +144,53 @@
           opacity: 0;
         }
       }
+
+      /* Footer styling */
+      .footer {
+        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1rem;
+        margin-top: 2rem;
+        text-align: center;
+      }
+
+      .footer a {
+        color: #60a5fa;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer a:hover {
+        color: #93c5fd;
+        text-decoration: underline;
+      }
+
+      .heart-beat {
+        animation: heartbeat 1.5s ease infinite;
+        display: inline-block;
+      }
+
+      @keyframes heartbeat {
+        0% { transform: scale(1); }
+        14% { transform: scale(1.3); }
+        28% { transform: scale(1); }
+        42% { transform: scale(1.3); }
+        70% { transform: scale(1); }
+      }
     </style>
     <script src="script.js" defer></script>
   </head>
-  <body class="bg-gray-900 text-gray-100 min-h-screen">
-    <div class="container mx-auto p-4">
+  <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+    <div class="container mx-auto p-4 flex-grow">
       <!-- Main content flex container - This allows two-column layout on wide screens -->
       <div class="flex flex-col lg:flex-row gap-6">
         <!-- Left column (Game content) -->
         <div class="w-full lg:w-2/3 bg-gray-800 rounded-lg shadow-lg p-6">
           <!-- Enhanced Header Section -->
           <div class="game-header">
-            <h1 class="game-title">🎮 Hex Game</h1>
-            <p class="game-subtitle">
-              Asah kemampuan konversi warna dengan cara yang menyenangkan!
-            </p>
+            <h1 class="game-title">
+              <img src="https://img.icons8.com/?size=100&id=3S5sGwmzdVzW&format=png&color=000000" alt="Game Icon" class="inline-block w-10 h-10 mr-2"> Hex Games
+            </h1>
           </div>
 
           <!-- Form Input Section - Multi-Column Layout -->
@@ -424,6 +456,14 @@
         </div>
       </div>
     </div>
+
+    <!-- Added Footer -->
+    <footer class="footer">
+      <p class="text-gray-300">
+        Made with <span class="text-red-500 heart-beat">❤️</span> by 
+        <a href="https://github.com/Lukman754" target="_blank" class="font-medium">Lukman754</a>
+      </p>
+    </footer>
 
     <script>
       // Modify the updateHistory function to update both history containers
