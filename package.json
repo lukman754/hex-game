@@ -1,0 +1,11 @@
+{
+  "name": "hex-game",
+  "version": "1.0.0",
+  "description": "Game konversi warna untuk belajar hex, rgb, dan desimal",
+  "scripts": {
+    "start": "serve public"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
